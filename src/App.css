@@ -1,0 +1,218 @@
+
+/*Appbar css*/
+.appbar {
+  max-width: 1500px; /* Set the maximum width for the container */
+  position: relative;
+  height: 60px;
+  display: flex;
+  margin:  auto;   /* Center the container horizontally */
+  padding: 10px;    /* Add some padding inside the container */
+  border: 2px solid hsl(0, 0%, 0%); /* Add a border for visualization */
+  background-color: rgba(78, 78, 240, 0.425);
+  border-radius: 10px;
+}
+.background{
+  position: relative;
+  border-radius:10px ;
+}
+
+.appbar h1 {
+  align-content: center;
+  left: 0;
+  top: 0;
+  margin: 10px;
+}
+
+/* button.css */
+.topRightButtons {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  
+}
+.topRightButtons button {
+  margin-right: 10px; /* Add some space between buttons */
+  font-weight: bold;
+
+}
+/* button.css */
+
+
+/*Appbar css*/
+
+
+ /*Footer css*/
+ .footer {
+  max-width: 1500px; /* Set the maximum width for the container */
+  
+  height: 60px;
+  display: flex;
+  margin:  auto;   /* Center the container horizontally */
+  padding: 10px;    /* Add some padding inside the container */
+  border: 2px solid hsl(0, 100%, 96%); /* Add a border for visualization */
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  bottom: 0; 
+  position: "fixed",
+ 
+
+}
+
+.footer h1{
+  text-align-last: right;
+  text-decoration-color: bisque;
+  color: bisque;
+}
+.footer p{
+  position: relative;
+  color: bisque;
+  text-align: right;
+
+}
+  /*Footer css*/
+
+
+  /* ContainerWithDivs.css */
+.container2 {
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 100vh;
+border: 2px solid hsl(0, 100%, 96%);
+}
+
+.division {
+border: 1px solid #ddd;
+background-color: rgb(98, 190, 190);
+padding: 20px;
+margin: 10px;
+text-align: center;
+border-radius: 10px;
+}
+
+.inputData {
+background-color: rgb(98, 190, 190);
+padding: 20px;
+margin: 10px;
+text-align: center;
+height: 300px;
+border-radius: 10px;
+width: 300px;
+}
+.inputFeild{
+border-radius: 30px;
+height: 30px;
+padding: 10px;
+  
+}
+/* ContainerWithDivs.css */
+
+*{
+font-family: 'Jost', sans-serif;
+font-family: 'Quicksand', sans-serif;
+}
+
+/* min max.css */
+.tempmin_max{
+font-size: 20px;
+font-weight: bold;
+
+}
+
+/* min max.css */
+
+
+/* About.css */
+.image {
+border: 1px solid #ddd;
+background-color: rgb(98, 190, 190);
+padding: 10px;
+margin: 10px;
+text-align: center;
+border-radius: 10px;
+height: 350px;
+width: 300px;
+justify-content: center;
+align-items: center; 
+position: relative;
+}
+.image h2{
+font-weight: bold;
+}
+.image p{
+font-weight: bold;
+}
+
+.image img {
+max-width: 300px; /* Make the image responsive */
+height: 200px; /* Maintain aspect ratio */
+border: 1px solid #ddd; /* Add a border around the image */
+border-radius: 8px; /* Add a border radius for rounded corners */
+margin-top: 10px; /* Add some space above the image */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.container4 h1 {
+text-align: center;
+text-decoration: solid;
+font-size: 60px;
+}
+
+.container4 p{
+font-size: 20px;
+font-weight: bold;
+}
+
+
+/* About.css */
+
+
+
+/* Contact.css */
+.container5 h1{
+text-align: center;
+}
+
+
+
+form {
+display: flex;
+align-items: flex-start;
+flex-direction: column;
+width: 100%;
+font-size: 16px;
+
+}
+
+.textarea {
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  max-height: 100px;
+  min-height: 100px;
+  padding: 7px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+
+
+}
+
+.label {
+  margin-top: 1rem;
+  font-weight: bold;
+  
+}
+
+.input[type="submit"] {
+  margin-top: 2rem;
+  cursor: pointer;
+  background: rgb(249, 105, 14);
+  color: rgb(0, 0, 0);
+  border: none;
+}
+
+/* Contact.css */
+
+
+
