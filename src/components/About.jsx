@@ -38,7 +38,7 @@ function About() {
                         <a href="https://github.com/Satyabrata011" target="_blank" rel="noopener noreferrer">
                             <FaGithub style={iconStyle} />
                         </a>
-                        <a href="www.linkedin.com/in/satyabrata-pradhan-2b735120b" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/satyabrata-pradhan-2b735120b" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin style={iconStyle} />
                         </a>
                     </div>
@@ -52,7 +52,7 @@ function About() {
                         <a href="https://github.com/Satyabrata011" target="_blank" rel="noopener noreferrer">
                             <FaGithub style={iconStyle} />
                         </a>
-                        <a href="www.linkedin.com/satyabrata-pradhan-2b735120b" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/satyabrata-pradhan-2b735120b" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin style={iconStyle} />
                         </a>
                     </div>
