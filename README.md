@@ -83,7 +83,7 @@ VITE_EMAILJS_PUBLIC_KEY=your_emailjs_key
 Add screenshots here:
 
 ## Home Page
-![Home Page](src/assets/Source/home page.png)
+![Home Page](src/assets/Source/home%20page.png)
 
 ## About Page
 ![About Page](src/assets/Source/About.png)
