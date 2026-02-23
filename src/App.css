@@ -5,48 +5,35 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
-  background-color: #E8D9B5;
-}
-
-html, body, #root {
+  padding: 0;
   height: 100%;
-  margin: 0;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-html, body, #root {
-  height: 100%;
-  margin: 0;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
 
 /* ================= NAVBAR ================= */
 
 .navbar {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 15px 40px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 15px 30px;
-  margin: 10px;
-
   background: linear-gradient(135deg, #FF8F8F, #9B8AC9);
-  border-radius: 16px;
+  z-index: 1000;
 
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin: 0;
 }
 
 .logo {
@@ -64,6 +51,7 @@ html, body, #root {
   text-decoration: none;
   color: white;
 }
+
 .topRightButtons {
   display: flex;
   gap: 15px;
@@ -73,84 +61,65 @@ html, body, #root {
   text-decoration: none;
 }
 
-/* Modern aesthetic palette buttons */
-
 .btn3d {
   padding: 10px 22px;
-
   font-size: 15px;
   font-weight: 600;
   color: white;
 
   background: rgba(255,255,255,0.2);
-
   border: 1px solid rgba(255,255,255,0.4);
   border-radius: 12px;
 
   cursor: pointer;
-
   backdrop-filter: blur(8px);
 
   transition: all 0.3s ease;
-
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .btn3d:hover {
   background: rgba(255,255,255,0.35);
   transform: translateY(-2px);
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.btn3d:active {
-  transform: scale(0.95);
-}
-
-.btn3d.active {
-  background: #9BB4C9;
 }
 
 
 /* ================= FOOTER ================= */
 
-
 .footer {
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 15px 40px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-   margin: 10px;
-
-  padding: 15px 30px;
-
   background: linear-gradient(135deg, #9B8AC9, #9B8AC9);
-
-  border-radius: 16px;
-
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.12);
-
   color: white;
-
+  z-index: 1000;
+  margin: 0;
 }
 
-/* Footer text styling */
 .footer h1 {
   margin: 0;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .footer p {
   margin: 0;
   font-size: 14px;
-  text-align: right;
 }
 
 
-/* ================= MAIN CONTAINER ================= */
-.main-section {
+/* ================= PAGE BACKGROUND (Home / About / Contact) ================= */
 
-  min-height: 100vh;
+.page-section {
+  height: 100vh;
+  width: 100%;
 
   display: flex;
   justify-content: center;
@@ -158,46 +127,32 @@ html, body, #root {
 
   background-image:
     linear-gradient(
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.45)
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
     ),
     url("/src/assets/Source/BG.png");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  padding-top: 80px;   /* height of navbar */
+  padding-bottom: 70px; /* height of footer */
 }
 
 
 /* ================= WEATHER CARD ================= */
 
-.division {
-  background: #9BB4C9;
-
-  padding: 20px;
-  margin: 10px;
-
-  text-align: center;
-
-  border-radius: 16px;
-
-  color: white;
-
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
 .weather-card {
-
-  width: 340px;
-  padding: 35px 30px;
+  width: 380px;
+  padding: 45px 35px;
 
   border-radius: 25px;
 
-  /* ✨ Premium glass gradient */
   background: linear-gradient(
     145deg,
-    #9b8ac900,
-    #9b8ac99a
+    rgba(155,138,201,0.15),
+    rgba(155,138,201,0.5)
   );
 
   backdrop-filter: blur(20px);
@@ -205,7 +160,6 @@ html, body, #root {
 
   border: 1px solid rgba(255, 255, 255, 0.35);
 
-  /* 🌟 Softer cinematic shadow */
   box-shadow:
     0 30px 60px rgba(0, 0, 0, 0.35),
     inset 0 0 25px rgba(255, 255, 255, 0.08);
@@ -215,27 +169,28 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
 
   transition: all 0.3s ease;
 }
+
+.weather-card:hover {
+  transform: translateY(-5px);
+}
+
 .weather-card h1 {
   font-size: 42px;
   font-weight: 600;
   margin: 15px 0;
 }
+
 .weather-card h2 {
   font-size: 22px;
   font-weight: 500;
   opacity: 0.9;
 }
-.weather-card:hover {
-  transform: translateY(-5px);
-  box-shadow:
-    0 40px 70px rgba(0, 0, 0, 0.4),
-    0 0 40px rgba(255, 255, 255, 0.1);
-}
+
+
 /* ================= INPUT ================= */
 
 .inputFeild {
@@ -244,141 +199,74 @@ html, body, #root {
   padding: 10px;
 
   border: none;
-
   outline: none;
 
   background: #ffffffcc;
-}
-.inputFeild:hover {
-  background: #ffffff;
-  transform: translateY(-2px);
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-
-/* ================= TEMP ================= */
-
-.tempmin_max {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
 }
 
 
 /* ================= ABOUT PAGE ================= */
 
-/* ================= ABOUT SECTION ================= */
-
-.about-section {
+.about-content {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-
-  padding: 40px;
-
-  background-color: #E8D9B5;
-
-  min-height: calc(100vh - 160px);
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
 }
-
-
-/* LEFT SIDE TEXT */
 
 .about-left {
   max-width: 500px;
+  color: white;
 }
 
 .about-title {
   font-size: 64px;
-
-  font-weight: 900;   /* makes text bold */
-  letter-spacing: 1px;
+  font-weight: 900;
 
   background: linear-gradient(135deg, #FF8F8F, #9B8AC9);
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  background-clip: text;
-  color: transparent;
 
   margin-bottom: 20px;
 }
 
 .about-description {
   font-size: 20px;
-  color: #222;
-
-  background: linear-gradient(135deg, rgba(255, 143, 143, 0.15), rgba(155, 138, 201, 0.15));
-
+  background: rgba(255,255,255,0.15);
   padding: 15px 20px;
-
   border-radius: 12px;
-
-  border: 1px solid rgba(155, 138, 201, 0.3);
-
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-
-  max-width: 500px;
 }
 
 
 /* TEAM CARD */
 
 .team-card {
-  background: linear-gradient(135deg, #9BB4C9, #9B8AC9);
+  background: linear-gradient(
+    135deg,
+    rgba(255,143,143,0.5),
+    rgba(155,138,201,0.6)
+  );
 
   padding: 20px;
-
   border-radius: 20px;
-
   width: 300px;
 
   text-align: center;
-
   color: white;
 
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-
-  transition: transform 0.3s ease;
 }
-
-/* .team-card:hover {
-  transform: translateY(-8px);
-} */
-
-
-/* IMAGE */
 
 .team-card img {
   width: 100%;
   height: 200px;
-
   border-radius: 12px;
-
   margin-bottom: 15px;
 }
 
-
-/* TEXT */
-
-.team-card h2 {
-  margin: 10px 0 5px 0;
-  font-weight: 600;
-}
-
-.team-card p {
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-
-/* SOCIAL ICONS */
-
 .social-icons {
   margin-top: 10px;
-
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -387,220 +275,108 @@ html, body, #root {
 .social-icons a {
   font-size: 24px;
   color: white;
-
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .social-icons a:hover {
   transform: scale(1.2);
-  color: #000000;
+  color: black;
 }
 
 
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-
-  .about-section {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .about-left {
-    text-align: center;
-  }
-
-}
-
-
-/* ================= CONTACT SECTION ================= */
-
-.contact-section {
-
-  flex: 1;   /* VERY IMPORTANT - prevents overlap */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: #E8D9B5;
-
-  padding: 40px 20px;
-
-}
-.contact-container {
-
-  background: linear-gradient(135deg, #9BB4C9, #9B8AC9);
-
-  padding: 30px;
-
-  border-radius: 20px;
-
-  width: 400px;
-
-  max-width: 90%;
-
-  margin: 20px 0;
-
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-
-}
-/* CONTACT CONTAINER CARD */
+/* ================= CONTACT PAGE ================= */
 
 .contact-container {
-
-  background: linear-gradient(135deg, #9BB4C9, #9B8AC9);
+  width: 380px;
   padding: 40px;
-  border-radius: 20px;
-  width: 400px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-  color: white;
+
+  border-radius: 25px;
+
+  background: rgba(255,255,255,0.15);
+
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.35);
+
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+
   text-align: center;
+  color: white;
 }
-
-
-/* TITLE */
 
 .contact-title {
-
   font-size: 36px;
-
   font-weight: 900;
-
   margin-bottom: 10px;
 
   background: linear-gradient(135deg, #FF8F8F, #ffffff);
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
 
-
-/* DESCRIPTION */
-
 .contact-description {
-
   margin-bottom: 25px;
-
   font-size: 16px;
-
   background: rgba(255,255,255,0.2);
-
   padding: 10px;
-
   border-radius: 10px;
 }
 
-
-/* FORM */
-
 .contact-form {
-
   display: flex;
-
   flex-direction: column;
-
-  gap: 12px;
+  gap: 15px;
 }
-
-
-/* LABEL */
 
 .contact-form label {
-
   text-align: left;
-
-  font-weight: 600;
+  font-size: 14px;
 }
-
-
-/* INPUT */
 
 .contact-form input,
 .contact-form textarea {
-
   padding: 12px;
-
-  border-radius: 10px;
-
-  border: none;
-
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.15);
+  color: white;
   outline: none;
-
-  font-size: 14px;
-
-  
 }
-
-
-/* TEXTAREA */
 
 .contact-form textarea {
-
-  height: 100px;
-
   resize: none;
+  height: 100px;
 }
 
-
-/* BUTTON */
-
 .contact-button {
-
-  margin-top: 15px;
-
-  background-color: #FF8F8F;   /* coral – stands out clearly */
-
-  color: white;
-
-  border: none;
-
+  margin-top: 10px;
   padding: 12px;
 
   border-radius: 12px;
+  border: none;
 
+  font-weight: 600;
   font-size: 16px;
 
-  font-weight: 700;
+  background: linear-gradient(135deg, #FF8F8F, #9B8AC9);
+  color: white;
 
   cursor: pointer;
-
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-
+  transition: 0.3s ease;
 }
-
-/* .contact-button:hover {
-  background: linear-gradient(135deg, #6FA3C8, #9B8AC9);
-} */
-
-
-/* BUTTON HOVER */
 
 .contact-button:hover {
-
-  transform: translateY(-2px);
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-3px);
 }
-
-
-/* RESPONSIVE */
-
-@media (max-width: 500px) {
-
-  .contact-container {
-
-    width: 90%;
-  }
-
-}
-
 
 
 /* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
 
 @media (max-width: 768px) {
 
@@ -614,4 +390,11 @@ html, body, #root {
     justify-content: center;
   }
 
+  .weather-card {
+    width: 90%;
+  }
+
+  .contact-container {
+    width: 90%;
+  }
 }

@@ -30,7 +30,7 @@ const [search, setSearch] =useState("Bengaluru");
   return (
     <div className="background" style={containerStyle}>
       
-    {<div className="main-section">
+    {<div className="page-section">
       <div className="weather-card">
         <input type="search"
         className="inputFeild"
