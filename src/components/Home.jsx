@@ -30,13 +30,13 @@ const [search, setSearch] =useState("Bengaluru");
   return (
     <div className="background" style={containerStyle}>
       
-    {<div className="container2">
-      <div className="inputData">
+    {<div className="main-section">
+      <div className="weather-card">
         <input type="search"
         className="inputFeild"
         onChange={ (event) =>{ setSearch(event.target.value)} } />
         
-      
+
     { !city ? (
       <p>
         No Data Found</p>
