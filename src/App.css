@@ -34,6 +34,8 @@ html, body {
 
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   margin: 0;
+
+  border-radius: 10px;
 }
 
 .logo {
@@ -102,6 +104,7 @@ html, body {
   color: white;
   z-index: 1000;
   margin: 0;
+  border-radius: 10px;
 }
 
 .footer h1 {
@@ -206,7 +209,29 @@ html, body {
 
 
 /* ================= ABOUT PAGE ================= */
+.about-container {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  gap: 80px;
 
+  width: 100%;
+  max-width: 1200px;
+}
+
+.about-section {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ 
+
+  padding-top: 80px;   /* navbar space */
+  padding-bottom: 70px; /* footer space */
+}
 .about-content {
   display: flex;
   justify-content: center;
@@ -217,7 +242,7 @@ html, body {
 
 .about-left {
   max-width: 500px;
-  color: white;
+  text-align: left;
 }
 
 .about-title {
@@ -233,7 +258,7 @@ html, body {
 
 .about-description {
   font-size: 20px;
-  background: rgba(255,255,255,0.15);
+  background: linear-gradient(135deg, #ff8f8fa2, #9b8ac9a4);
   padding: 15px 20px;
   border-radius: 12px;
 }
@@ -242,11 +267,7 @@ html, body {
 /* TEAM CARD */
 
 .team-card {
-  background: linear-gradient(
-    135deg,
-    rgba(255,143,143,0.5),
-    rgba(155,138,201,0.6)
-  );
+ background: linear-gradient(135deg, #ff8f8fa2, #9b8ac9a4);
 
   padding: 20px;
   border-radius: 20px;
@@ -286,21 +307,36 @@ html, body {
 
 /* ================= CONTACT PAGE ================= */
 
-.contact-container {
-  width: 380px;
-  padding: 40px;
+.contact-section {
+  height: 100vh;
+  width: 100%;
 
-  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  background: rgba(255,255,255,0.15);
 
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.35);
+  padding-top: 80px;   /* navbar space */
+  padding-bottom: 70px; /* footer space */
 
-  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
-
-  text-align: center;
   color: white;
+}
+
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* LEFT SIDE TEXT */
+
+.contact-left {
+  max-width: 450px;
+  text-align: left;
 }
 
 .contact-title {
@@ -325,6 +361,9 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  background: linear-gradient(135deg, #ff8f8f6f, #9b8ac96d);
+  border-radius: 10px;
+
 }
 
 .contact-form label {
@@ -372,12 +411,26 @@ html, body {
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
-  .about-content {
+  .about-container {
     flex-direction: column;
-    gap: 40px;
+    text-align: center;
+  }
+
+  .about-left {
+    text-align: center;
   }
 }
 
+@media (max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-left {
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
 
   .navbar {
